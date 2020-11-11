@@ -132,7 +132,7 @@
               </ui:GetFullText>
               <ui:GetFullText IgnoreHidden="{x:Null}" DisplayName="Get Temperature" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetFullText_2">
                 <ui:GetFullText.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2006c958-47af-495b-a9ad-3f2312aec9cc" InformativeScreenshot="0453490343b92173d29824c80ad47587" Selector="&lt;webctrl aria-role='heading' parentid='wob_d' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2006c958-47af-495b-a9ad-3f2312aec9cc" InformativeScreenshot="e3c5db433d4157b6e76ff25b06c9a563" Selector="&lt;webctrl id='wob_tm' tag='SPAN' /&gt;" WaitForReady="COMPLETE">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -143,7 +143,7 @@
                 </ui:GetFullText.Text>
               </ui:GetFullText>
               <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
-              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Temperature: &quot; + temperature + Environment.NewLine +&#xD;&#xA;&quot;Weather: &quot; + weather + Environment.NewLine]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;City: &quot; + city + Environment.NewLine +&#xD;&#xA;&quot;Temperature: &quot; + temperature + &quot; °F&quot; +  Environment.NewLine +&#xD;&#xA;&quot;Weather: &quot; + weather + Environment.NewLine]" />
             </Sequence>
           </ActivityAction>
         </ui:OpenBrowser.Body>
