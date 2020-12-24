@@ -72,7 +72,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Web Main" sap:VirtualizedContainerService.HintSize="867,1799" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Web Main" sap:VirtualizedContainerService.HintSize="867,1935" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="0" Name="rowNumber" />
       <Variable x:TypeArguments="sd:DataTable" Name="customersData" />
@@ -105,15 +105,15 @@
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
     </ui:ExcelApplicationScope>
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="[BrowserType.Chrome]" DisplayName="Private: Open Browser" sap:VirtualizedContainerService.HintSize="825,1407" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Url="https://rpacrm.bubbleapps.io/">
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="[BrowserType.Chrome]" DisplayName="Private: Open Browser" sap:VirtualizedContainerService.HintSize="825,1543" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Url="https://rpacrm.bubbleapps.io/">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="791,1306" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+          <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="791,1442" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
             <ui:InterruptibleWhile.Body>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="755,1141" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="755,1277" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -217,6 +217,18 @@
                     </ui:Target>
                   </ui:TypeInto.Target>
                 </ui:TypeInto>
+                <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Item="{x:Null}" Items="{x:Null}" DisplayName="Select Item" sap:VirtualizedContainerService.HintSize="713,96" sap2010:WorkflowViewState.IdRef="SelectItem_1">
+                  <ui:SelectItem.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="3afde368-39ae-4f0f-a06f-6c8e82f907ec">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SelectItem.Target>
+                </ui:SelectItem>
                 <Assign DisplayName="Counter" sap:VirtualizedContainerService.HintSize="713,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">[rowNumber]</OutArgument>
