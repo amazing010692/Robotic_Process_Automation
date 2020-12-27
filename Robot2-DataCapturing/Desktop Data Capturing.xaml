@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1327,2965" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="857,2791" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -62,7 +62,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Desktop Main" sap:VirtualizedContainerService.HintSize="867,2860" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence DisplayName="Desktop Main" sap:VirtualizedContainerService.HintSize="867,2686" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="0" Name="rowNumber" />
       <Variable x:TypeArguments="sd:DataTable" Name="customersData" />
@@ -95,15 +95,15 @@
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
     </ui:ExcelApplicationScope>
-    <ui:OpenApplication ApplicationWindow="{x:Null}" Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Open My CRM (Sample App)" FileName="D:\Robots\Robot2-DataCapturing\mycrm.exe" sap:VirtualizedContainerService.HintSize="825,2322" sap2010:WorkflowViewState.IdRef="OpenApplication_1" InformativeScreenshot="0696f41ad0e3976951a518f0310b5de6" Selector="&lt;wnd app='mycrm.exe' ctrlname='Form1' /&gt;">
+    <ui:OpenApplication ApplicationWindow="{x:Null}" Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Open My CRM (Sample App)" FileName="D:\Robots\Robot2-DataCapturing\mycrm.exe" sap:VirtualizedContainerService.HintSize="825,2148" sap2010:WorkflowViewState.IdRef="OpenApplication_1" InformativeScreenshot="0696f41ad0e3976951a518f0310b5de6" Selector="&lt;wnd app='mycrm.exe' ctrlname='Form1' /&gt;">
       <ui:OpenApplication.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <ui:InterruptibleWhile Condition="[rowNumber &lt; customersData.Rows.Count]" DisplayName="While" sap:VirtualizedContainerService.HintSize="791,2176" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
+          <ui:InterruptibleWhile Condition="[rowNumber &lt; customersData.Rows.Count]" DisplayName="While" sap:VirtualizedContainerService.HintSize="791,2002" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
             <ui:InterruptibleWhile.Body>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="755,2011" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="755,1837" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -207,72 +207,6 @@
                     </ui:Target>
                   </ui:TypeInto.Target>
                 </ui:TypeInto>
-                <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="5" DelayBefore="5" DisplayName="Select State" sap:VirtualizedContainerService.HintSize="713,134" sap2010:WorkflowViewState.IdRef="SelectItem_3" Item="[customersData(rowNumber)(&quot;state&quot;).ToString]">
-                  <ui:SelectItem.Items>
-                    <scg:List x:TypeArguments="x:String" Capacity="50">
-                      <x:String>Choose an option...</x:String>
-                      <x:String></x:String>
-                      <x:String>Alabama</x:String>
-                      <x:String>Alaska</x:String>
-                      <x:String>Arizona</x:String>
-                      <x:String>Arkansas</x:String>
-                      <x:String>California</x:String>
-                      <x:String>Colorado</x:String>
-                      <x:String>Connecticut</x:String>
-                      <x:String>Delaware</x:String>
-                      <x:String>District of Columbia</x:String>
-                      <x:String>Florida</x:String>
-                      <x:String>Georgia</x:String>
-                      <x:String>Hawaii</x:String>
-                      <x:String>Idaho</x:String>
-                      <x:String>Illinois</x:String>
-                      <x:String>Indiana</x:String>
-                      <x:String>Iowa</x:String>
-                      <x:String>Kansas</x:String>
-                      <x:String>Kentucky</x:String>
-                      <x:String>Louisiana</x:String>
-                      <x:String>Maine</x:String>
-                      <x:String>Maryland</x:String>
-                      <x:String>Massachusetts</x:String>
-                      <x:String>Michigan</x:String>
-                      <x:String>Minnesota</x:String>
-                      <x:String>Mississippi</x:String>
-                      <x:String>Missouri</x:String>
-                      <x:String>Montana</x:String>
-                      <x:String>Nebraska</x:String>
-                      <x:String>Nevada</x:String>
-                      <x:String>New Hampshire</x:String>
-                      <x:String>New Jersey</x:String>
-                      <x:String>New Mexico</x:String>
-                      <x:String>New York</x:String>
-                      <x:String>North Carolina</x:String>
-                      <x:String>North Dakota</x:String>
-                      <x:String>Ohio</x:String>
-                      <x:String>Oklahoma</x:String>
-                      <x:String>Oregon</x:String>
-                      <x:String>Pennsylvania</x:String>
-                      <x:String>Rhode Island</x:String>
-                      <x:String>South Carolina</x:String>
-                      <x:String>South Dakota</x:String>
-                      <x:String>Tennessee</x:String>
-                      <x:String>Texas</x:String>
-                      <x:String>Utah</x:String>
-                      <x:String>Vermont</x:String>
-                      <x:String>Virginia</x:String>
-                      <x:String>Washington</x:String>
-                    </scg:List>
-                  </ui:SelectItem.Items>
-                  <ui:SelectItem.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3afde368-39ae-4f0f-a06f-6c8e82f907ec" InformativeScreenshot="95241975bb8f66e514b49880f66da8e5" Selector="&lt;wnd ctrlname='tabControl1' /&gt;&lt;wnd ctrlname='tabPagePeople' /&gt;&lt;wnd ctrlname='groupBox2' /&gt;&lt;wnd ctrlname='textBoxPeopleHomePhone' /&gt;">
-                      <ui:Target.TimeoutMS>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:Target.TimeoutMS>
-                      <ui:Target.WaitForReady>
-                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                      </ui:Target.WaitForReady>
-                    </ui:Target>
-                  </ui:SelectItem.Target>
-                </ui:SelectItem>
                 <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayBefore="5" DelayMS="5" DisplayName="Type Home Phone" EmptyField="True" sap:VirtualizedContainerService.HintSize="713,134" sap2010:WorkflowViewState.IdRef="TypeInto_21" SimulateType="True" Text="[customersData(rowNumber)(&quot;home phone&quot;).ToString]">
                   <ui:TypeInto.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="69a2735d-9507-4d9e-bb21-48554481fc4c" InformativeScreenshot="37a56d61fa22f6c14aeaa8ea0fa710b5" Selector="&lt;wnd ctrlname='tabControl1' /&gt;&lt;wnd ctrlname='tabPagePeople' /&gt;&lt;wnd ctrlname='groupBox2' /&gt;&lt;wnd ctrlname='textBoxPeopleHomePhone' /&gt;">
