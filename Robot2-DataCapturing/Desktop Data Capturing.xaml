@@ -171,7 +171,7 @@
                         </ui:CursorPosition>
                       </ui:Click.CursorPosition>
                       <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="542d5cc4-2a58-4291-adfb-b05b45fbf553" InformativeScreenshot="edfb09b18addee27fbb67c992f8d3dbe" Selector="&lt;html app='chrome.exe' title='Bubble Application' /&gt;&lt;webctrl aaname='Male' tag='LABEL' /&gt;">
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="542d5cc4-2a58-4291-adfb-b05b45fbf553" InformativeScreenshot="5358b616bb378ca494ab7572153c454a" Selector="&lt;wnd ctrlname='tabControl1' /&gt;&lt;wnd ctrlname='tabPagePeople' /&gt;&lt;wnd ctrlname='groupBox5' /&gt;&lt;wnd ctrlname='radioButtonMale' /&gt;">
                           <ui:Target.TimeoutMS>
                             <InArgument x:TypeArguments="x:Int32" />
                           </ui:Target.TimeoutMS>
