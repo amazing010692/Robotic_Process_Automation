@@ -121,7 +121,7 @@
                       <OutArgument x:TypeArguments="x:String">[varLastName]</OutArgument>
                     </ui:GetRowItem.Value>
                   </ui:GetRowItem>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;first name=&quot;+varLastName]" />
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;last name=&quot;+varLastName]" />
                 </Sequence>
               </ActivityAction>
             </ui:BrowserScope.Body>
