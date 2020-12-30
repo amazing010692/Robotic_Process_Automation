@@ -123,7 +123,7 @@
                     </ui:GetRowItem.Value>
                   </ui:GetRowItem>
                   <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;last name=&quot;+varLastName]" />
-                  <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Last Name" DisplayName="Get Row Item Company Name" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_3" Row="[row]">
+                  <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Company Name" DisplayName="Get Row Item Company Name" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_3" Row="[row]">
                     <ui:GetRowItem.Value>
                       <OutArgument x:TypeArguments="x:String">[varCompanyName]</OutArgument>
                     </ui:GetRowItem.Value>
