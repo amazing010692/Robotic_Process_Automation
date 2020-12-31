@@ -116,7 +116,7 @@
                     <Variable x:TypeArguments="x:String" Name="varRoleInCompany" />
                     <Variable x:TypeArguments="x:String" Name="varAddress" />
                     <Variable x:TypeArguments="x:String" Name="varEmail" />
-                    <Variable x:TypeArguments="x:Double" Name="varPhoneNumber" />
+                    <Variable x:TypeArguments="ui:GenericValue" Name="varPhoneNumber" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -155,7 +155,7 @@
                   </ui:GetRowItem>
                   <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Phone Number" DisplayName="Get Row Item Phone Number" sap:VirtualizedContainerService.HintSize="726,64" sap2010:WorkflowViewState.IdRef="GetRowItem_7" Row="[row]">
                     <ui:GetRowItem.Value>
-                      <OutArgument x:TypeArguments="x:Double">[varPhoneNumber]</OutArgument>
+                      <OutArgument x:TypeArguments="ui:GenericValue">[varPhoneNumber]</OutArgument>
                     </ui:GetRowItem.Value>
                   </ui:GetRowItem>
                   <ui:AnchorBase AnchorPosition="Auto" DisplayName="Anchor Base First Name" sap:VirtualizedContainerService.HintSize="726,226" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
