@@ -60,6 +60,6 @@
         <OutArgument x:TypeArguments="x:String">[varLocation]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Your city is: &quot; + varLocation]" />
   </Sequence>
 </Activity>
