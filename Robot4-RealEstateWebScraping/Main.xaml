@@ -104,7 +104,7 @@
               </ui:ExtractData.Target>
             </ui:ExtractData>
             <ui:OutputDataTable DataTable="[varExtractDataTable]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[stringDT]" />
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" />
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[stringDT]" />
           </Sequence>
         </ActivityAction>
       </ui:OpenBrowser.Body>
