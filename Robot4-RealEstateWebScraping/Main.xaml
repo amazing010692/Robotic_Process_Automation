@@ -121,7 +121,7 @@
                         <OutArgument x:TypeArguments="x:Double">[varPrice]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
-                        <InArgument x:TypeArguments="x:Double">[row("Price").ToString]</InArgument>
+                        <InArgument x:TypeArguments="x:Double">[Convert.ToDouble(row("Price").ToString.Replace("$","").Replace(",","").Replace("--","0"))]</InArgument>
                       </Assign.Value>
                     </Assign>
                     <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
