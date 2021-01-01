@@ -170,7 +170,7 @@
                             <InArgument x:TypeArguments="x:Double">[Convert.ToDouble(row("AreaSqft").ToString.Replace(" sqft","").Replace(",","").Trim)]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="611,61" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[varPrice.ToString]" />
+                        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="611,61" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[varAreaSqft.ToString]" />
                         <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="611,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                           <ui:CommentOut.Body>
                             <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_6">
