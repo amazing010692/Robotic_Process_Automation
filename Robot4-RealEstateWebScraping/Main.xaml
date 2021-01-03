@@ -364,7 +364,7 @@
               </ui:FilterDataTable.SelectColumns>
             </ui:FilterDataTable>
             <ui:SortDataTable ColumnIndex="{x:Null}" DataColumn="{x:Null}" ColumnName="Price" DataTable="[varFilteredDataTable]" DisplayName="Sort Data Table" sap:VirtualizedContainerService.HintSize="741,22" sap2010:WorkflowViewState.IdRef="SortDataTable_1" Order="Ascending" OutputDataTable="[varSortedDataTable]" SortOrder="Ascending" />
-            <ui:OutputDataTable DataTable="[varFilteredDataTable]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="741,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[stringDT]" />
+            <ui:OutputDataTable DataTable="[varSortedDataTable]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="741,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[stringDT]" />
             <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="741,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[stringDT]" />
           </Sequence>
         </ActivityAction>
