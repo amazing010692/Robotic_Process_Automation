@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="849,2889" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1065,2889" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="27">
       <x:String>System.Activities</x:String>
@@ -183,7 +183,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <If Condition="[row(&quot;Price&quot;).ToString.Contains(&quot;M&quot;)]" sap:VirtualizedContainerService.HintSize="611,399" sap2010:WorkflowViewState.IdRef="If_1">
+                        <If Condition="[row(&quot;Price&quot;).ToString.Contains(&quot;M&quot;)]" DisplayName="If Contains M in Price" sap:VirtualizedContainerService.HintSize="611,399" sap2010:WorkflowViewState.IdRef="If_1">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_7">
                               <sap:WorkflowViewStateService.ViewState>
@@ -191,7 +191,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                              <Assign DisplayName="Assign Price Remove M" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Double">[varPrice]</OutArgument>
                                 </Assign.To>
@@ -199,7 +199,7 @@
                                   <InArgument x:TypeArguments="x:Double">[Convert.ToDouble(row("Price").ToString.Replace("$","").Replace(",","").Replace("--","0").Trim.Replace("M",""))]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                              <Assign DisplayName="Assign Price Times A Million" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Double">[varPrice]</OutArgument>
                                 </Assign.To>
@@ -210,7 +210,7 @@
                             </Sequence>
                           </If.Then>
                           <If.Else>
-                            <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                            <Assign DisplayName="Assign Price No M" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:Double">[varPrice]</OutArgument>
                               </Assign.To>
@@ -233,7 +233,7 @@
                             <OutArgument x:TypeArguments="x:Int32">[varBeds]</OutArgument>
                           </Assign.To>
                           <Assign.Value>
-                            <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(row("Beds").ToString.Trim.Split(" "c)(0))]</InArgument>
+                            <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(row("Beds").ToString.Replace("Studio","1").Trim.Split(" "c)(0))]</InArgument>
                           </Assign.Value>
                         </Assign>
                         <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="611,61" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[varBeds.ToString]" />
