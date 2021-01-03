@@ -286,7 +286,7 @@
                 </ActivityAction>
               </ui:ForEachRow.Body>
             </ui:ForEachRow>
-            <ui:OutputDataTable DataTable="[varExtractDataTable]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="741,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[stringDT]" />
+            <ui:OutputDataTable DataTable="[varBuildDataTable]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="741,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[stringDT]" />
             <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="741,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[stringDT]" />
           </Sequence>
         </ActivityAction>
