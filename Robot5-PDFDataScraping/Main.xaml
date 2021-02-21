@@ -51,6 +51,11 @@
   <Sequence sap:VirtualizedContainerService.HintSize="554,1467" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:Object[]" Name="filelist" />
+      <Variable x:TypeArguments="x:Int32" Name="counter">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" Value="1" />
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -72,13 +77,6 @@
             <DelegateInArgument x:TypeArguments="x:Object" Name="file" />
           </ActivityAction.Argument>
           <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,1141" sap2010:WorkflowViewState.IdRef="Sequence_2">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="x:Int32" Name="counter">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:Int32" Value="1" />
-                </Variable.Default>
-              </Variable>
-            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
