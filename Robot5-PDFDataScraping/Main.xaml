@@ -80,7 +80,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="[&quot;1000_Invoices\Invoice &quot; + counter.ToString + &quot;.pdf&quot;]" sap:VirtualizedContainerService.HintSize="434,87" sap2010:WorkflowViewState.IdRef="StartProcess_1" />
-            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'foxitreader.exe Billing'" sap:VirtualizedContainerService.HintSize="434,260" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="89a39773e63a0506aa95198b9ef2a217" Selector="&lt;wnd app='foxitreader.exe' cls='classFoxitReader' title='Billing Invoice Template - Foxit Reader' /&gt;">
+            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach to PDF Invoice" sap:VirtualizedContainerService.HintSize="434,260" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="89a39773e63a0506aa95198b9ef2a217" Selector="&lt;wnd app='foxitreader.exe' cls='classFoxitReader' title='Billing Invoice Template - Foxit Reader' /&gt;">
               <ui:WindowScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
