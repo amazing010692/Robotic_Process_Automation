@@ -105,7 +105,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'text  1 725,00'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_1">
                         <ui:GetValue.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="97a800bd-1ba5-4357-ae0b-d37abc3a0a13" InformativeScreenshot="935499d369153eda54f8792f1b9b3609" Selector="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl role='row' idx='7' /&gt;&lt;ctrl name='TOTAL' role='text' /&gt;&lt;nav up='2' /&gt;&lt;ctrl name='*' role='text' idx='1' /&gt;">
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="97a800bd-1ba5-4357-ae0b-d37abc3a0a13" InformativeScreenshot="935499d369153eda54f8792f1b9b3609" Selector="&lt;wnd aaname='Document Pane' cls='AVL_AVView' title='AVScrolledPageView' /&gt;&lt;wnd cls='AVL_AVView' title='AVPageView' /&gt;&lt;ctrl role='row' idx='7' /&gt;&lt;ctrl name='TOTAL' role='text' /&gt;&lt;nav up='2' /&gt;&lt;ctrl name='*' role='text' idx='3' /&gt;">
                             <ui:Target.TimeoutMS>
                               <InArgument x:TypeArguments="x:Int32" />
                             </ui:Target.TimeoutMS>
