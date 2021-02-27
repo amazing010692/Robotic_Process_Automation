@@ -94,7 +94,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="376,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-                    <Sequence DisplayName="Scrape Data" sap:VirtualizedContainerService.HintSize="376,299" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <Sequence DisplayName="Scrape TOTAL" sap:VirtualizedContainerService.HintSize="376,299" sap2010:WorkflowViewState.IdRef="Sequence_5">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="ui:GenericValue" Name="varTotal" />
                       </Sequence.Variables>
