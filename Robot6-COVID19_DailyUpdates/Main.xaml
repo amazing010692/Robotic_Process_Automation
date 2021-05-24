@@ -58,6 +58,7 @@
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="CovidDT" />
       <Variable x:TypeArguments="x:String" Name="CountryName" />
+      <Variable x:TypeArguments="x:String" Name="TotalCases" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -104,7 +105,8 @@
             <If.Then>
               <Sequence sap:VirtualizedContainerService.HintSize="304,352" sap2010:WorkflowViewState.IdRef="Sequence_4">
                 <Sequence.Variables>
-                  <Variable x:TypeArguments="x:String" Name="TotalCases" />
+                  <Variable x:TypeArguments="x:String" Name="TotalDeaths" />
+                  <Variable x:TypeArguments="x:String" Name="TotalRecovered" />
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -121,7 +123,7 @@
                 </Assign>
                 <Assign DisplayName="Assign Total Deaths" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                   <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">[TotalCases]</OutArgument>
+                    <OutArgument x:TypeArguments="x:String">[TotalDeaths]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
                     <InArgument x:TypeArguments="x:String">[row(4).ToString]</InArgument>
@@ -129,7 +131,7 @@
                 </Assign>
                 <Assign DisplayName="Assign Total Recovered" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
                   <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">[TotalCases]</OutArgument>
+                    <OutArgument x:TypeArguments="x:String">[TotalRecovered]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
                     <InArgument x:TypeArguments="x:String">[row(6).ToString]</InArgument>
