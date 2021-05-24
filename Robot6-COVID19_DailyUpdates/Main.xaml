@@ -166,7 +166,7 @@
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="518,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[TotalCases + vbCr + TotalDeaths + vbCr + TotalRecovered + vbCr]" />
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="518,472" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[{&quot;hello.janielle1992@gmail.com&quot;,&quot;hello_janielle1992yahoo.com.ph&quot;,&quot;janiellegreg@gmail.com&quot;}]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="518,472" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[(&quot;hello.janielle1992@gmail.com; hello_janielle1992yahoo.com.ph; janiellegreg@gmail.com&quot;).ToString]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
