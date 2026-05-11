@@ -163,7 +163,7 @@ Robotic_Process_Automation/
 ### Step 3: Clone This Repository
 
 ```bash
-git clone https://github.com/janiellejoygregorio/Robotic_Process_Automation.git
+git clone https://github.com/amazing010692/Robotic_Process_Automation.git
 cd Robotic_Process_Automation
 ```
 
@@ -278,6 +278,8 @@ A: Create a new folder, initialize a UiPath project, and follow the naming conve
 ---
 
 ## 🔒 Security Notes
+
+See [SECURITY.md](SECURITY.md) for the full security policy.
 
 - No credentials or API keys are stored in this repository
 - UiPath Orchestrator Assets should be used for production secrets

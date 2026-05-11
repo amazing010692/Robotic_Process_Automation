@@ -18,15 +18,10 @@ jobs:
       - name: Check for sensitive files
         run: |
           echo "🔒 Checking for sensitive files..."
-          found=0
-
-          # Check for common sensitive patterns
-          if find . -name "*.pem" -o -name "*.key" -o -name ".env" | grep -q .; then
-            echo "⚠️  Potentially sensitive files detected"
-            find . -name "*.pem" -o -name "*.key" -o -name ".env"
-            found=1
+          SENSITIVE=$(find . -name "*.pem" -o -name "*.key" -o -name ".env" | grep -v node_modules || true)
+          if [ -n "$SENSITIVE" ]; then
+            echo "❌ Potentially sensitive files detected:"
+            echo "$SENSITIVE"
+            exit 1
           fi
-
-          if [ $found -eq 0 ]; then
-            echo "✅ No sensitive files detected"
-          fi
+          echo "✅ No sensitive files detected"

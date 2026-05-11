@@ -19,17 +19,20 @@ projects=0
 for dir in */; do
     if [ -f "$dir/project.json" ]; then
         projects=$((projects + 1))
+        project_errors=0
 
         # Check Main.xaml exists
         if [ ! -f "$dir/Main.xaml" ]; then
             echo -e "${RED}❌ $dir — Missing Main.xaml${NC}"
             errors=$((errors + 1))
+            project_errors=$((project_errors + 1))
         fi
 
         # Check project.json is valid JSON
         if ! python3 -c "import json; json.load(open('${dir}project.json'))" 2>/dev/null; then
             echo -e "${RED}❌ $dir — Invalid project.json${NC}"
             errors=$((errors + 1))
+            project_errors=$((project_errors + 1))
         fi
 
         # Check for meaningful description
@@ -43,7 +46,9 @@ for dir in */; do
             echo -e "${RED}⚠️  $dir — Missing README.md${NC}"
         fi
 
-        echo -e "${GREEN}✅ $dir — Valid${NC}"
+        if [ $project_errors -eq 0 ]; then
+            echo -e "${GREEN}✅ $dir — Valid${NC}"
+        fi
     fi
 done
 

@@ -27,7 +27,7 @@ RobotN-Name/
 ## Your First Run (5 minutes)
 
 1. Install [UiPath Studio Community Edition](https://www.uipath.com/start-trial) (free)
-2. Clone this repo: `git clone https://github.com/janiellejoygregorio/Robotic_Process_Automation.git`
+2. Clone this repo: `git clone https://github.com/amazing010692/Robotic_Process_Automation.git`
 3. Open UiPath Studio → **Open Project** → select `Robot1-ClothingConsultant/project.json`
 4. Click **Run** (F5)
 5. Watch the robot interact with dialog boxes!
