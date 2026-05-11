@@ -1,0 +1,32 @@
+name: Validate UiPath Projects
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate project structure
+        run: chmod +x scripts/validate.sh && ./scripts/validate.sh
+
+      - name: Check for sensitive files
+        run: |
+          echo "🔒 Checking for sensitive files..."
+          found=0
+
+          # Check for common sensitive patterns
+          if find . -name "*.pem" -o -name "*.key" -o -name ".env" | grep -q .; then
+            echo "⚠️  Potentially sensitive files detected"
+            find . -name "*.pem" -o -name "*.key" -o -name ".env"
+            found=1
+          fi
+
+          if [ $found -eq 0 ]; then
+            echo "✅ No sensitive files detected"
+          fi

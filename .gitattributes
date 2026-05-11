@@ -1,0 +1,32 @@
+# =============================================================================
+# Git Attributes - UiPath RPA Repository
+# =============================================================================
+
+# Auto-detect text files and normalize line endings
+* text=auto
+
+# UiPath workflow files (XML-based, should use LF)
+*.xaml text eol=lf
+
+# JSON configuration
+*.json text eol=lf
+
+# Documentation
+*.md text eol=lf
+
+# Excel files (binary)
+*.xlsx binary
+*.xls binary
+
+# PDF files (binary)
+*.pdf binary
+
+# Executables (binary)
+*.exe binary
+
+# =============================================================================
+# Git LFS (uncomment when Git LFS is enabled)
+# =============================================================================
+# *.pdf filter=lfs diff=lfs merge=lfs -text
+# *.exe filter=lfs diff=lfs merge=lfs -text
+# *.xlsx filter=lfs diff=lfs merge=lfs -text

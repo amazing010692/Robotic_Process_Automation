@@ -1,6 +1,6 @@
 {
   "name": "Robot6-COVID19_DailyUpdates",
-  "description": "Blank Process",
+  "description": "Scrapes daily COVID-19 statistics from web sources for reporting.",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.10.4]",

@@ -1,6 +1,6 @@
 {
   "name": "Arguments",
-  "description": "Blank Process",
+  "description": "Demonstrates UiPath argument passing between workflows (In, Out, In/Out).",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.9.3]",
